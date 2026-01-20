@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - TOUR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'ubuntu': ['Ubuntu', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-white">
+    <div id="header"></div>
+
+    <!-- Page Header -->
+    <div class="bg-gradient-to-br from-[rgba(19,145,167,1)] to-[rgba(43,164,149,1)] py-20">
+        <div class="w-full max-w-[1280px] mx-auto px-8 text-center">
+            <h1 class="font-ubuntu font-bold text-[56px] text-white mb-4">
+                Explore Destinations
+            </h1>
+            <p class="font-ubuntu text-[24px] text-white/90">
+                Discover amazing places around the world
+            </p>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="py-8 px-8 bg-white border-b border-gray-200">
+        <div class="w-full max-w-[1280px] mx-auto">
+            <div class="flex items-center gap-4">
+                <svg class="w-5 h-5 text-[#0D3E55]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
+                <div class="flex items-center gap-3">
+                    <button onclick="filterDestinations('All')" class="filter-btn px-6 py-2 rounded-full font-ubuntu font-medium text-[16px] transition-colors bg-gradient-to-br from-[rgba(19,145,167,1)] to-[rgba(43,164,149,1)] text-white">
+                        All
+                    </button>
+                    <button onclick="filterDestinations('Beach')" class="filter-btn px-6 py-2 rounded-full font-ubuntu font-medium text-[16px] transition-colors bg-gray-100 text-[#696969] hover:bg-gray-200">
+                        Beach
+                    </button>
+                    <button onclick="filterDestinations('Mountain')" class="filter-btn px-6 py-2 rounded-full font-ubuntu font-medium text-[16px] transition-colors bg-gray-100 text-[#696969] hover:bg-gray-200">
+                        Mountain
+                    </button>
+                    <button onclick="filterDestinations('City')" class="filter-btn px-6 py-2 rounded-full font-ubuntu font-medium text-[16px] transition-colors bg-gray-100 text-[#696969] hover:bg-gray-200">
+                        City
+                    </button>
+                    <button onclick="filterDestinations('Cultural')" class="filter-btn px-6 py-2 rounded-full font-ubuntu font-medium text-[16px] transition-colors bg-gray-100 text-[#696969] hover:bg-gray-200">
+                        Cultural
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Destinations Grid -->
+    <div class="py-20 px-8">
+        <div class="w-full max-w-[1280px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="destinations-grid">
+                <!-- Destinations will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/destinations.js"></script>
+</body>
+</html>
+
