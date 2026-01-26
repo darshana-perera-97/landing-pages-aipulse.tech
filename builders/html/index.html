@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATELIER - Less is More</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50" id="navigation">
+    <div class="backdrop-blur-md bg-white/80 border-b border-[#87CEEB]/20">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-20">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="index.html" class="text-2xl tracking-[0.2em] font-light">ATELIER</a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center gap-12">
+            <a href="index.html" class="text-sm tracking-[0.15em] transition-colors text-[#87CEEB]">Home</a>
+            <a href="portfolio.html" class="text-sm tracking-[0.15em] transition-colors text-gray-600 hover:text-[#87CEEB]">Portfolio</a>
+            <a href="services.html" class="text-sm tracking-[0.15em] transition-colors text-gray-600 hover:text-[#87CEEB]">Services</a>
+            <a href="about.html" class="text-sm tracking-[0.15em] transition-colors text-gray-600 hover:text-[#87CEEB]">About & Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" class="md:hidden text-gray-600 hover:text-[#87CEEB] transition-colors">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden backdrop-blur-md bg-white/95 border-b border-[#87CEEB]/20">
+      <div class="px-8 py-6 space-y-4">
+        <a href="index.html" class="block text-sm tracking-[0.15em] transition-colors text-[#87CEEB]">Home</a>
+        <a href="portfolio.html" class="block text-sm tracking-[0.15em] transition-colors text-gray-600 hover:text-[#87CEEB]">Portfolio</a>
+        <a href="services.html" class="block text-sm tracking-[0.15em] transition-colors text-gray-600 hover:text-[#87CEEB]">Services</a>
+        <a href="about.html" class="block text-sm tracking-[0.15em] transition-colors text-gray-600 hover:text-[#87CEEB]">About & Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-gradient-to-b from-white via-[#F0F8FF] to-white">
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1756227584303-f1400daaa69d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjkzMDM5Njl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Modern Architecture"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white/90"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-[1440px] mx-auto px-5 md:px-20 text-center">
+        <h1 class="text-6xl md:text-8xl tracking-[0.15em] font-light mb-8">LESS IS MORE</h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+          Timeless architectural design for the modern world
+        </p>
+        <a
+          href="portfolio.html"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#87CEEB] text-white text-sm tracking-[0.15em] hover:bg-[#87CEEB]/90 transition-all"
+        >
+          VIEW PROJECTS
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+        <i data-lucide="circle" class="w-2 h-2 text-[#87CEEB]"></i>
+      </div>
+    </section>
+
+    <!-- Selected Works - Bento Grid -->
+    <section class="py-32 max-w-[1440px] mx-auto px-5 md:px-20">
+      <div class="mb-16">
+        <h2 class="text-4xl md:text-5xl tracking-[0.15em] font-light mb-4">SELECTED WORKS</h2>
+        <div class="w-20 h-px bg-[#87CEEB]"></div>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+        <!-- Large Featured -->
+        <div class="md:col-span-8 md:row-span-2 group relative overflow-hidden aspect-[4/3] md:aspect-auto">
+          <img
+            src="https://images.unsplash.com/photo-1756227584303-f1400daaa69d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjkzMDM5Njl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Skyline Residences"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <p class="text-xs tracking-[0.15em] mb-2 text-[#87CEEB]">Residential</p>
+              <h3 class="text-2xl tracking-[0.1em]">Skyline Residences</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medium Cards -->
+        <div class="md:col-span-4 group relative overflow-hidden aspect-square">
+          <img
+            src="https://images.unsplash.com/photo-1571273033940-89c3e9bb18b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYXJjaGl0ZWN0dXJlJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzY5MzQzMTkyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Minimal Living"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <p class="text-xs tracking-[0.15em] mb-2 text-[#87CEEB]">Interior</p>
+              <h3 class="text-xl tracking-[0.1em]">Minimal Living</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 group relative overflow-hidden aspect-square">
+          <img
+            src="https://images.unsplash.com/photo-1681216868987-b7268753b81c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBhcmNoaXRlY3R1cmUlMjBleHRlcmlvcnxlbnwxfHx8fDE3NjkzODA4MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Urban Complex"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <p class="text-xs tracking-[0.15em] mb-2 text-[#87CEEB]">Commercial</p>
+              <h3 class="text-xl tracking-[0.1em]">Urban Complex</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wide Card -->
+        <div class="md:col-span-8 group relative overflow-hidden aspect-[2/1]">
+          <img
+            src="https://images.unsplash.com/photo-1640109229792-a26a0ee366ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBob3VzZXxlbnwxfHx8fDE3NjkzODEwODB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Luxury Villa"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <p class="text-xs tracking-[0.15em] mb-2 text-[#87CEEB]">Residential</p>
+              <h3 class="text-2xl tracking-[0.1em]">Luxury Villa</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a
+          href="portfolio.html"
+          class="inline-flex items-center gap-2 text-sm tracking-[0.15em] text-gray-600 hover:text-[#87CEEB] transition-colors"
+        >
+          VIEW ALL PROJECTS
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Our Philosophy -->
+    <section class="py-32 bg-gradient-to-b from-white to-[#F0F8FF]">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+          <!-- Text Content -->
+          <div>
+            <h2 class="text-4xl md:text-5xl tracking-[0.15em] font-light mb-8">OUR PHILOSOPHY</h2>
+            <div class="w-20 h-px bg-[#87CEEB] mb-8"></div>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              We believe in the power of simplicity. Every line, every space, every material
+              is carefully considered to create harmonious environments that stand the test of time.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-8">
+              Our approach combines timeless principles with contemporary innovation,
+              resulting in spaces that are both functional and beautiful.
+            </p>
+            <a
+              href="about.html"
+              class="inline-flex items-center gap-2 px-8 py-4 border border-[#87CEEB] text-[#87CEEB] text-sm tracking-[0.15em] hover:bg-[#87CEEB] hover:text-white transition-all"
+            >
+              LEARN MORE
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Glassmorphism Card -->
+          <div class="relative">
+            <div class="backdrop-blur-lg bg-white/60 border border-[#87CEEB]/20 p-12 shadow-2xl">
+              <div class="space-y-8">
+                <div>
+                  <div class="w-12 h-12 bg-[#87CEEB]/10 flex items-center justify-center mb-4">
+                    <span class="text-2xl text-[#87CEEB]">01</span>
+                  </div>
+                  <h3 class="text-xl tracking-[0.1em] mb-2">Timeless Design</h3>
+                  <p class="text-sm text-gray-600 leading-relaxed">
+                    Creating spaces that transcend trends and remain relevant for generations
+                  </p>
+                </div>
+
+                <div>
+                  <div class="w-12 h-12 bg-[#87CEEB]/10 flex items-center justify-center mb-4">
+                    <span class="text-2xl text-[#87CEEB]">02</span>
+                  </div>
+                  <h3 class="text-xl tracking-[0.1em] mb-2">Sustainable Approach</h3>
+                  <p class="text-sm text-gray-600 leading-relaxed">
+                    Mindful selection of materials and construction methods for minimal environmental impact
+                  </p>
+                </div>
+
+                <div>
+                  <div class="w-12 h-12 bg-[#87CEEB]/10 flex items-center justify-center mb-4">
+                    <span class="text-2xl text-[#87CEEB]">03</span>
+                  </div>
+                  <h3 class="text-xl tracking-[0.1em] mb-2">Client Collaboration</h3>
+                  <p class="text-sm text-gray-600 leading-relaxed">
+                    Working closely with you to understand your vision and bring it to life
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-20 text-center">
+        <h2 class="text-4xl md:text-5xl tracking-[0.15em] font-light mb-8">START YOUR PROJECT</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+          Let's create something extraordinary together. Get in touch to discuss your vision.
+        </p>
+        <a
+          href="about.html"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#87CEEB] text-white text-sm tracking-[0.15em] hover:bg-[#87CEEB]/90 transition-all"
+        >
+          GET IN TOUCH
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#87CEEB]/20 bg-gradient-to-b from-white to-[#F0F8FF]">
+    <div class="max-w-[1440px] mx-auto px-5 md:px-20 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Brand -->
+        <div>
+          <h3 class="text-2xl tracking-[0.2em] font-light mb-4">ATELIER</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Creating timeless architectural spaces with modern minimalism
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm tracking-[0.15em] mb-4 text-gray-900">QUICK LINKS</h4>
+          <div class="space-y-2 text-sm text-gray-600">
+            <a href="about.html" class="block hover:text-[#87CEEB] transition-colors cursor-pointer">About Us</a>
+            <a href="services.html" class="block hover:text-[#87CEEB] transition-colors cursor-pointer">Services</a>
+            <a href="portfolio.html" class="block hover:text-[#87CEEB] transition-colors cursor-pointer">Portfolio</a>
+            <a href="about.html" class="block hover:text-[#87CEEB] transition-colors cursor-pointer">Contact</a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-sm tracking-[0.15em] mb-4 text-gray-900">CONTACT</h4>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p>info@atelier.design</p>
+            <p>+1 (555) 123-4567</p>
+            <p>123 Design Avenue</p>
+            <p>New York, NY 10001</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-8 border-t border-[#87CEEB]/20 text-center">
+        <p class="text-xs tracking-[0.15em] text-gray-500">
+          © 2026 ATELIER DESIGN. ALL RIGHTS RESERVED.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
